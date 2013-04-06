@@ -4,9 +4,12 @@ from django.conf.urls import patterns, include, url
 #from django.contrib import admin
 #admin.autodiscover()
 
+handler404 = 'todos_app.views.not_found_404'
+handler500 = 'todos_app.views.internal_error_500'
+
 urlpatterns = patterns('',
 	url(r'^todos/', include('todos_app.urls')),
-    # Examples:
+	# Examples:
     # url(r'^$', 'TodosProject.views.home', name='home'),
     # url(r'^TodosProject/', include('TodosProject.foo.urls')),
 

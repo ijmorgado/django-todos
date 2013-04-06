@@ -17,5 +17,10 @@ def detail(request, todo_id):
             task = Task.objects.get(pk=todo_id)
     	except Task.DoesNotExist:
         	raise Http404
-    	return render(request, 'tasks/detail.html', {'task': task})
+   	return render(request, 'tasks/detail.html', {'task': task})
         
+def not_found_404(request, template_name='system/not_found.html'):
+    return render(request, template_name)
+
+def internal_error_500(request,template_name='system/internal_error.html'):
+	return render(request, template_name)
