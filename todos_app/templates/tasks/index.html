@@ -1,0 +1,10 @@
+
+{% if latest_todos %}
+    <ul>
+    {% for task in latest_todos %}
+        <li><a href="/todos/{{ task.id }}/">{{ task.task }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No tasks are available.</p>
+{% endif %}
