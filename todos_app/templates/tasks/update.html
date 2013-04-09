@@ -1,0 +1,12 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<h1>{{ task.task }}</h1>
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<form action="{% url 'todos:Save-task' %}" method="post">
+{% csrf_token %}
+	<label for="ui-taskInput">Titulo:</label><br />
+	<input type="text" name="task" id="ui-taskInput" value="{{ task.task }}" />
+	<input type="hidden" name="id" value="{{ task.id }}">
+	<input type="submit" value="Vote" class="btn btn-success" />
+</form>
+{% endblock %}

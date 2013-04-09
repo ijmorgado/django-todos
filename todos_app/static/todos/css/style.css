@@ -1,0 +1,30 @@
+body {
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-color: #478a42;
+}
+.ui-wall{
+	z-index: 100;
+	position: relative;
+	-webkit-box-shadow: #aaa 2px 1px 5px,#aaa -2px 1px 5px;
+	-moz-box-shadow: #aaa 2px 1px 5px,#aaa -2px 1px 5px;
+	box-shadow: #aaa 2px 1px 5px,#aaa -2px 1px 5px;
+	padding: 15px;
+	background: white;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: 25px 0;
+}
+.doit-green{
+	color: #2c5629;
+}
+.doit-green:hover{
+	color: #bddeba;
+	text-decoration: none;
+}
+@media (max-width:979px){
+	body{
+		padding-top: 0px;
+	}
+}
