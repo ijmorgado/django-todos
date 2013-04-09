@@ -1,10 +1,13 @@
-
+{% extends "layout/base.html" %}
+{% block content %}
 {% if latest_todos %}
+	<h6>My first to-do list.</h6>
     <ul>
     {% for task in latest_todos %}
-        <li>{{ forloop.counter }}. {{ task.task }} <a href="{% url 'todos:Detail' task.id %}">Ver tarea</a> / <a href="{% url 'todos:Update' task.id %}">Editar tarea</a></li>
+        <li>{{ forloop.counter }}. {{ task.task }} <a href="{% url 'todos:Detail' task.id %}" class="doit-green">Ver tarea</a> / <a href="{% url 'todos:Update' task.id %}" class="doit-green">Editar tarea</a></li>
     {% endfor %}
     </ul>
 {% else %}
     <p>No tasks are available.</p>
 {% endif %}
+{% endblock %}
