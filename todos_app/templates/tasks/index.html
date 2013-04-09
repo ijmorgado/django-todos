@@ -2,7 +2,7 @@
 {% if latest_todos %}
     <ul>
     {% for task in latest_todos %}
-        <li><a href="/todos/{{ task.id }}/">{{ task.task }}</a></li>
+        <li>{{ forloop.counter }}. {{ task.task }} <a href="{% url 'todos:Detail' task.id %}">Ver tarea</a> / <a href="{% url 'todos:Update' task.id %}">Editar tarea</a></li>
     {% endfor %}
     </ul>
 {% else %}

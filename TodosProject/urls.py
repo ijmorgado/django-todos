@@ -8,7 +8,7 @@ handler404 = 'todos_app.views.not_found_404'
 handler500 = 'todos_app.views.internal_error_500'
 
 urlpatterns = patterns('',
-	url(r'^todos/', include('todos_app.urls')),
+	url(r'^todos/', include('todos_app.urls',namespace='todos')),
 	# Examples:
     # url(r'^$', 'TodosProject.views.home', name='home'),
     # url(r'^TodosProject/', include('TodosProject.foo.urls')),
